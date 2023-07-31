@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" xmlns:th = "http://www.thymeLeaf.org"
+				xmlns:sec = "http://www.thymeLeaf.org/extras/spring-security">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
+   <link rel="stylesheet" th:href="@{/css/index.css}">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>MediSync</title>
+</head>
+
+<body>
+
+
+</div>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+		 <nav class="nav">
+      <div> <a href="#" class="nav_logo"><img th:src="@{/images/logowhite-01.png}" alt=""></a>
+        <div class="nav_list">
+          <a th:href="@{/patients/showAdminIndex}" class="nav_link"> <img th:src="@{/images/Group 36.png}" alt="" width="16px"> <span
+              class="nav_name">Dashboard</span> </a>
+          <a th:href="@{/patients/list}" class="nav_link"> <img th:src="@{/images/Layer_1.png}" alt="" width="16px"> <span
+              class="nav_name">Patient</span> </a>
+          <a th:href="@{/patients/listDoctors}" class="nav_link"> <img th:src="@{/images/Group 2.png}" alt="" width="16px"> <span
+              class="nav_name">Doctors</span> </a> <a th:href="@{/showBloodForAdmin}" class="nav_link AddBloodForm.html"> <img th:src="@{/images/Vector.png}"
+						alt="" width="12px"> <span class="nav_name">Blood</span></a> 
+		  <a th:href="@{/showAmbulanceForAdmin}" class="nav_link"> <img
+						th:src="@{/images/Layer_1 (1).png}" alt="" width="16px"> <span
+						class="nav_name">Ambulance</span> </a>
+          <a th:href="@{/patients/showBlog}" class="nav_link active"> <img th:src="@{/images/Layer_1 (2).png}" alt="" width="16px"> <span
+              class="nav_name">Blogs</span> </a>
+        </div>
+        <form action="#" th:action="@{/logout}" method="POST" id="form-logout">
+      <input id="button" type="submit" value="Logout"/>
+      </form>
+      </div>
+    </nav>
+    
+  </div>
+
+  <div class="profile">
+     <div class="name"><span sec:authentication="principal.username" style="text-transform:capitalize"></span></div>
+    <img th:src="@{/images/user.png}" alt="" width="45x" height="45px"
+      style="border-radius: 50%; border: 0.5px solid #d9d9d9;">
+  </div>
+
+<!-- ALERTS RAKHNU PARXAA -->
+    <!-- <div class="alert alert-warning alert-dismissible fade show lmargin" role="alert">
+        Your appointment was successfully booked.
+      </div>
+       -->
+  <form action="#" th:action="@{/blogs}" 
+  					th:object="${blogs}" method="POST">
+  			<!-- we have used the "${blogs}" vanne object name in BlogController-->
+    <div class="opening" id="form-title">
+      <h4>Add <span style="color: var(--secondary-color);">Blog & Articles</span></h4>
+    </div>
+    
+    <!-- Add hidden form field to handle the update -->
+    <input type="hidden" th:field="*{id}">
+    <br>
+    <!--  <div class="mb-2">
+      <label for="exampleName" class="form-label">Image</label>
+      <input type="file" class="form-control sub-heading" id="exampleInputName" width="100"
+        th:field="*{img}" placeholder="Upload Image" required>
+    </div> -->
+    <div class="mb-2">
+      <label for="exampleName" class="form-label">Title</label>
+      <input type="text" class="form-control sub-heading" id="exampleInputName" width="100"
+        th:field="*{title}" placeholder="Enter Title" required>
+    </div>
+   
+      <div class="mb-2">
+        <label for="exampleInputNumber" class="form-label">Description</label>
+        <textarea class="form-control sub-heading" id="textAreaExample" rows="5" th:field="*{description}" placeholder="Describe your blog/article" required></textarea>
+        </div>
+      </div>
+     
+    <button type="submit" class="btn btn-primary btn-sm mb-3">Submit</button>
+  <br>
+  <a th:href="@{/blog}" style="text-decoration:none">See the blogs</a>
+<!-- yo chai admin ko page ma matra rakhne!! -->
+
+  </form>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script> 
+    <script> 
+        $( document ).ready(function() {     
+        $("#from-datepicker").datepicker({          
+        format: 'yyyy-mm-dd' //can also use format: 'dd-mm-yyyy'     
+        });      
+        });  
+        </script>
+  <script src="index.js"></script>
+</body>
+
+
+</html>

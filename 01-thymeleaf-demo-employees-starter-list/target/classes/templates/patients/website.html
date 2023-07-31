@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeLeaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediSync</title>
+    <!-- Bootstrap imported css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- FontFamly imported -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet">
+<style>
+@charset "UTF-8";
+:root {
+    --bluecolor: #4D77FF;
+    --greycolor: #696969;
+    --blackcolor: #121212;
+    --first-color: #4D77FF;
+    --second-color:#696969;
+    --secondary-color:#00cb5b;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "poppins", "Manrope";
+    overflow: hidden;
+}
+
+.wrapper {
+    /* max-width: 1290px; */
+    margin: 0 auto;
+
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#we{
+    margin: 0;
+}
+.btn.blue {
+    background: #4D77FF;
+    border-radius: 8px;
+    font-size: 1.1rem;
+
+}
+
+.btn.stoke {
+    color: #4D77FF;
+    background: #FFFFFF;
+    border: 1px solid #4D77FF;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* header */
+header {
+    background: #ffffff;
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(86, 51, 57); */
+}
+
+nav {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* text-align: center; */
+    position: fixed;
+    width: 100%;
+    top: 5px;
+    z-index: 100;
+    /* background-color: aqua; */
+}
+
+nav img {
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+button{
+    background: #4D77FF;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 15px;
+    /* margin: 5px 5px 0 0 ; */
+    font-size: 1.1rem;
+}
+#btn{
+    background-color: #fff;
+    color: #4D77FF;
+    border: 1px #4D77FF solid;
+}
+nav .ul.btn.unknown {
+    display: flex;
+    align-items: left;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 18px;
+    color: #121212;
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    background-image: url("./images/Group\ 162.png");
+    background-repeat: no-repeat;
+    margin-top: 70px;
+}
+.content{
+    padding: 0 100px;
+}
+.hero-section .content h4 {
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 38px;
+    color: #000000;
+}
+
+.hero-section .content h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 50px;
+    color: #4D77FF;
+    margin-bottom: 40px;
+}
+
+.hero-section .content p {
+    font-family: 'Manrope';
+font-weight: 400;
+font-size: 18px;
+/* color: #696969; */
+margin-bottom: 40px;
+}
+
+
+
+
+
+/*FRONT PAGE*/
+#form-title{
+    text-align: center;
+  }
+.front{
+    /* display: contents; */
+  margin-top: 15%;
+  margin-left: 25%;
+   
+    /* width: 500px; */
+    /* padding: 20px 0px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 16px; */
+  
+  
+    font-size: var(--sub-heading-font);
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 540px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 30px;
+  }
+  
+  .left,.right{
+   background:var(--bluecolor);
+  text-align: center;
+    padding: 20px 30px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 16px;
+  }
+  .left{
+    width: auto;
+  }
+  .front-label{
+    margin: 20px 0;
+  }
+  #btn1,#btn2,#btn3,#btn4{
+    padding: 8px 15px;
+  }
+  
+  </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    <a th:href="@{showWebsite}"><img src="./images/logo.png" alt=""/></a>
+
+                </div>
+                <ul class="button">
+                    <li><a th:href="@{showLoginForm}" class="btn stoke">Log in</a></li>
+			<li><a th:href="@{/showRegistrationForm}" class="btn blue">Sign up</a></li>
+   
+                </ul>
+            </nav>
+            <!-- End of NavMenu -->
+
+            <div class="hero-section">
+                <div class="content">
+                    <h4>Leading the way to</h4>
+                    <h1>
+                        a Healthier Tomorrow.
+                    </h1>
+
+                    <p>Lorem ipsum dolor sit amet consectetur. Velit ullamcorper est mi in. 
+                        Facilisi lectus volutpat<br>
+                        curabitur erat. Lobortis aenean integer pellentesque laoreet.</p>
+
+
+                    <div class="webbtn">
+      <a th:href="@{/showRegistrationForm}" style="color: #fff; text-decoration: none;"><button style="background-color:#fff; color: var(--first-color); border: 1px #4D77FF solid;"> Make Appointment</button></a> 
+
+                        <!-- <button id="btn">Learn More</button> -->
+                    </div>
+                </div>
+
+
+                <!-- <div class="Ellipse">
+                    <img src="./image/Ellipse 1.png" class="img1" alt="">
+                </div> -->
+
+            </div>
+        </div>
+    </header>
+
+    </body>
+    </html>
